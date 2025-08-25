@@ -76,13 +76,21 @@ O sistema implementado possui 3 classes principais:
 ## 3. Estrutura de pacotes e arquivos
 
 versao_inicial/
+
 └── src/
+
 └── com/
+
 └── versao_inicial/
+
 └── sistemaloja/
+
 ├── SistemaLoja.java
+
 ├── Produto.java
-└── Relatorio.java
+
+├── Relatorio.java
+
 ---
 
 ## 👨‍💻Como Executar
