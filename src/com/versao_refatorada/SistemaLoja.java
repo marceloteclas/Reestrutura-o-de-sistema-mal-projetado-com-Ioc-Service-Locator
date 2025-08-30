@@ -3,7 +3,6 @@ package com.versao_refatorada;
 import java.util.ArrayList;
 import java.util.List;
 
-// Classe principal - responsabilidades mais bem distribuídas
 public class SistemaLoja {
     private List<Produto> produtos = new ArrayList<>();
     private double totalVendas = 0;
@@ -13,7 +12,6 @@ public class SistemaLoja {
         produtos.add(p);
     }
 
-    // Extração: lógica de listagem separada da exibição
     public List<Produto> getProdutos() {
         return produtos;
     }
@@ -22,13 +20,11 @@ public class SistemaLoja {
         if (indice >= 0 && indice < produtos.size()) {
             Produto p = produtos.get(indice);
             totalVendas += p.getPreco();
-            // Apenas regra de negócio aqui, sem System.out
         } else {
             throw new IllegalArgumentException("Produto inválido!");
         }
     }
 
-    // Mover método: resumo de dados para ser usado pelo Relatorio
     public ResumoLoja gerarResumo() {
         return new ResumoLoja(produtos, totalVendas);
     }
@@ -44,7 +40,6 @@ public class SistemaLoja {
         loja.venderProduto(0);
         loja.venderProduto(2);
 
-        // Relatorio agora só recebe o resumo
         relatorio.imprimirRelatorio(loja.gerarResumo());
     }
 }
