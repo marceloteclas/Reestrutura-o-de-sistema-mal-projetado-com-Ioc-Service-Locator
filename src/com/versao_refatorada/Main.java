@@ -2,7 +2,7 @@ package com.versao_refatorada;
 
 public class Main {
     public static void main(String[] args) {
-        ServiceLocator.register(Relatorio.class, new Relatorio());
+        ServiceLocator.register(Relatorio.class, new RelatorioConsole());
         ServiceLocator.register(ProdutoFactory.class, new ProdutoFactoryImpl());
         ServiceLocator.register(GeradorResumo.class, new GeradorResumoLoja());
 
