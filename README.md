@@ -32,8 +32,7 @@
 ## Estrutura do Projeto
 
 - **versao_inicial/**	Versão propositalmente mal projetada. Forte acoplamento, ausência de padrões, responsabilidades misturadas.
-- **versao_refatorada/**	Código refatorado com aplicação de princípios SOLID e técnicas como extração/movimentação de métodos, encapsulamento.
-- **reestruturacao_ioc_sl/**	Versão final com arquitetura moderna utilizando Inversão de Controle (IoC) e Service Locator para desacoplamento e modularidade.
+- **versao_refatorada/**	Versão final com arquitetura moderna utilizando Inversão de Controle (IoC) e Service Locator para desacoplamento e modularidade.
 ---
 
 # Sistema Mal Projetado – Versão Inicial
