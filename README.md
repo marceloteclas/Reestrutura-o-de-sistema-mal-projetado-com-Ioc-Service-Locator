@@ -30,10 +30,10 @@
 </table>
 
 ## Estrutura do Projeto
-- **versaoInicial/** → Código inicial, mal projetado (sem padrões de projeto).
-- **versaoRefatorada/** → Código refatorado, aplicando técnicas de refatoração e padrões arquiteturais modernos.
-- **Main.java** → Classe principal que executa as duas versão.
 
+- **versao_inicial/**	Versão propositalmente mal projetada. Forte acoplamento, ausência de padrões, responsabilidades misturadas.
+- **versao_refatorada/**	Código refatorado com aplicação de princípios SOLID e técnicas como extração/movimentação de métodos, encapsulamento.
+- **reestruturacao_ioc_sl/**	Versão final com arquitetura moderna utilizando Inversão de Controle (IoC) e Service Locator para desacoplamento e modularidade.
 ---
 
 # Sistema Mal Projetado – Versão Inicial
@@ -74,22 +74,34 @@ O sistema implementado possui 3 classes principais:
 ---
 
 ## 3. Estrutura de pacotes e arquivos
-
-versao_inicial/
-
-└── src/
-
+```
+src/
 └── com/
+    ├── versao_inicial/
+    │   ├── Produto.java
+    │   ├── Relatorio.java
+    │   ├── SistemaLoja.java
 
-└── versao_inicial/
+    ├── versao_refatorada/
+    │   ├── Produto.java
+    │   ├── Relatorio.java
+    │   ├── SistemaLoja.java
+    │   ├── ResumoLoja.java
 
-└── sistemaloja/
+    ├── reestruturacao_ioc_sl/
+    │   ├── GeradorResumo.java
+    │   ├── GeradorResumoLoja.java
+    │   ├── Main.java
+    │   ├── Produto.java
+    │   ├── ProdutoFactory.java
+    │   ├── ProdutoFactoryImpl.java
+    │   ├── Relatorio.java
+    │   ├── ResumoLoja.java
+    │   ├── ServiceLocator.java
+    │   ├── SistemaLoja.java
 
-├── SistemaLoja.java
 
-├── Produto.java
-
-├── Relatorio.java
+```
 
 ---
 
