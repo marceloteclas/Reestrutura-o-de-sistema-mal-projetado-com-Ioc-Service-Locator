@@ -8,8 +8,9 @@ public class SistemaLoja {
     private double totalVendas = 0;
 
     public void adicionarProduto(String nome, double preco) {
-        Produto p = new Produto(nome, preco);
-        produtos.add(p);
+        ProdutoFactory produtoFactory = ServiceLocator.get(ProdutoFactory.class);
+        Produto novoProduto = produtoFactory.criar(nome, preco);
+        produtos.add(novoProduto);
     }
 
     public List<Produto> getProdutos() {
@@ -25,21 +26,11 @@ public class SistemaLoja {
         }
     }
 
-    public ResumoLoja gerarResumo() {
-        return new ResumoLoja(produtos, totalVendas);
-    }
+    public void gerarResumo() {
+        GeradorResumo geradorResumo = ServiceLocator.get(GeradorResumo.class);
+        ResumoLoja resumo = geradorResumo.gerarResumo(produtos, totalVendas);
 
-    public static void main(String[] args) {
-        SistemaLoja loja = new SistemaLoja();
-        Relatorio relatorio = new Relatorio();
-
-        loja.adicionarProduto("Teclado", 100.0);
-        loja.adicionarProduto("Mouse", 50.0);   
-        loja.adicionarProduto("Monitor", 800.0);
-
-        loja.venderProduto(0);
-        loja.venderProduto(2);
-
-        relatorio.imprimirRelatorio(loja.gerarResumo());
+        Relatorio relatorio = ServiceLocator.get(Relatorio.class);
+        relatorio.imprimirRelatorio(resumo);
     }
 }

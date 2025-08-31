@@ -1,4 +1,4 @@
-package com.reestruturacao_ioc_sl;
+package com.versao_refatorada;
 
 import java.util.List;
 
