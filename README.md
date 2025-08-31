@@ -43,6 +43,37 @@
 **Objetivo:**  
 Criar um sistema funcional, porém propositalmente mal projetado, com 2 a 4 classes, responsabilidades misturadas, forte acoplamento e ausência de padrões de projeto.
 
+### Más práticas propositalmente criadas
+- God Object
+- Forte acoplamento
+- Quebra de encapsulamento
+- Mistura de responsabilidades
+- Código repetitivo/confuso
+  
+# Sistema Refatorado – Aplicação de SOLID
+
+## Etapa 2 – Refatoração
+
+**Objetivo:**
+Aplicar princípios SOLID e técnicas de refatoração para melhorar a coesão, modularidade e legibilidade do sistema.
+
+### Melhorias aplicadas na versão refatorada:
+- Encapsulamento de atributos.
+- Separação de responsabilidades.
+- Extração de métodos e modularização.
+- Preparação para introdução de padrões arquiteturais.
+  
+# Sistema Reestruturado – IoC e Service Locator
+
+## Etapa 3 – Arquitetura Moderna
+
+**Objetivo:**
+Aplicar Inversão de Controle (IoC) e o padrão Service Locator para desacoplar dependências e tornar o sistema extensível.
+
+### Melhorias aplicadas na versão com IoC/Service Locator:
+- Uso de interfaces (`ProdutoFactory`, `GeradorResumo`).
+- Injeção de dependências via `ServiceLocator`.
+- Separação clara entre lógica de negócio, criação de objetos e apresentação.
 ---
 
 ## 1. Estrutura do Sistema
@@ -111,9 +142,12 @@ src/
    git clone https://github.com/marceloteclas/Reestrutura-o-de-sistema-mal-projetado-com-Ioc-Service-Locator.git 
    ```
 2. Compile o código:
-   
-   javac src/main/java/com/**/*.java
+   ```bash
+   javac src/com/reestruturacao_ioc_sl/*.java
+   ```
  
 4. Rode o Main:
-   
-   java src/main/java/com/Main
+   ```bash
+   java -cp src com.reestruturacao_ioc_sl.Main
+   ```
+
