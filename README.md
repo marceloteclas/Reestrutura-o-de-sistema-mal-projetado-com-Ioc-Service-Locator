@@ -74,37 +74,10 @@ Aplicar Inversão de Controle (IoC) e o padrão Service Locator para desacoplar 
 - Uso de interfaces (`ProdutoFactory`, `GeradorResumo`).
 - Injeção de dependências via `ServiceLocator`.
 - Separação clara entre lógica de negócio, criação de objetos e apresentação.
----
-
-## 1. Estrutura do Sistema
-
-O sistema implementado possui 3 classes principais:
-
-1. **SistemaLoja.java**  
-   - Concentra cadastro, listagem e venda de produtos.  
-   - Faz todas as chamadas para `Produto` e `Relatorio`, caracterizando **God Object**.  
-
-2. **Produto.java**  
-   - Contém atributos públicos (`nome`, `preco`), sem encapsulamento.  
-   - Não possui métodos de validação, tornando a classe vulnerável a alterações externas indevidas.  
-
-3. **Relatorio.java**  
-   - Mistura responsabilidades de lógica de negócio e apresentação (gera relatório + imprime no console).  
-   - Não é modular nem reutilizável.
 
 ---
 
-## 2. Más práticas propositalmente criadas
-
-- **God Object**: `SistemaLoja` concentra todas as responsabilidades do sistema, dificultando manutenção e extensão.  
-- **Forte acoplamento**: todas as classes dependem diretamente umas das outras, sem interfaces ou abstrações.  
-- **Quebra de encapsulamento**: `Produto` possui atributos públicos, permitindo acesso direto e alterações indevidas.  
-- **Mistura de responsabilidades**: `Relatorio` combina lógica de cálculo com saída de dados na tela.  
-- **Código repetitivo/confuso**: listagem de produtos e vendas repetem lógica sem modularização.  
-
----
-
-## 3. Estrutura de pacotes e arquivos
+## 📁 Estrutura de pacotes e arquivos
 ```
 src/
 └── com/
