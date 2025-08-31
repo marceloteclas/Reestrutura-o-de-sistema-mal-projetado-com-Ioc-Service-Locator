@@ -8,9 +8,7 @@ public class SistemaLoja {
     private double totalVendas = 0;
 
     public void adicionarProduto(String nome, double preco) {
-        // Obtém a fábrica de produtos via Service Locator
         ProdutoFactory produtoFactory = ServiceLocator.get(ProdutoFactory.class);
-
         Produto novoProduto = produtoFactory.criar(nome, preco);
         produtos.add(novoProduto);
     }
@@ -29,7 +27,10 @@ public class SistemaLoja {
     }
 
     public void gerarResumo() {
+        GeradorResumo geradorResumo = ServiceLocator.get(GeradorResumo.class);
+        ResumoLoja resumo = geradorResumo.gerarResumo(produtos, totalVendas);
+
         Relatorio relatorio = ServiceLocator.get(Relatorio.class);
-        relatorio.imprimirRelatorio(produtos, totalVendas);
+        relatorio.imprimirRelatorio(resumo);
     }
 }

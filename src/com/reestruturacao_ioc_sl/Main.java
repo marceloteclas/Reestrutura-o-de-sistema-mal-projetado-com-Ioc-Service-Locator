@@ -2,9 +2,9 @@ package com.reestruturacao_ioc_sl;
 
 public class Main {
     public static void main(String[] args) {
-        // Configuração inicial (registro no Service Locator)
         ServiceLocator.register(Relatorio.class, new Relatorio());
         ServiceLocator.register(ProdutoFactory.class, new ProdutoFactoryImpl());
+        ServiceLocator.register(GeradorResumo.class, new GeradorResumoLoja());
 
         SistemaLoja loja = new SistemaLoja();
 
