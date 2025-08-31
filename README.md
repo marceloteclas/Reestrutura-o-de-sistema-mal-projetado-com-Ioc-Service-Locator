@@ -114,7 +114,11 @@ src/
    ```bash
    git clone https://github.com/marceloteclas/Reestrutura-o-de-sistema-mal-projetado-com-Ioc-Service-Locator.git 
    ```
-2. Compile o código:
+2. Navegue até o local que foi clonado o repositório:
+   ```bash
+   cd Reestrutura-o-de-sistema-mal-projetado-com-Ioc-Service-Locator
+   ```
+3. Compile o código:
    ```bash
    javac src/com/reestruturacao_ioc_sl/*.java
    ```
