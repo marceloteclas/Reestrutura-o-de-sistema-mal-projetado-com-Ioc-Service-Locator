@@ -50,22 +50,9 @@ Criar um sistema funcional, porém propositalmente mal projetado, com 2 a 4 clas
 - Mistura de responsabilidades
 - Código repetitivo/confuso
   
-# Sistema Refatorado – Aplicação de SOLID
-
-## Etapa 2 – Refatoração
-
-**Objetivo:**
-Aplicar princípios SOLID e técnicas de refatoração para melhorar a coesão, modularidade e legibilidade do sistema.
-
-### Melhorias aplicadas na versão refatorada:
-- Encapsulamento de atributos.
-- Separação de responsabilidades.
-- Extração de métodos e modularização.
-- Preparação para introdução de padrões arquiteturais.
-  
 # Sistema Reestruturado – IoC e Service Locator
 
-## Etapa 3 – Arquitetura Moderna
+## Etapa 2 – Arquitetura Moderna
 
 **Objetivo:**
 Aplicar Inversão de Controle (IoC) e o padrão Service Locator para desacoplar dependências e tornar o sistema extensível.
@@ -85,12 +72,6 @@ src/
     │   ├── Produto.java
     │   ├── Relatorio.java
     │   ├── SistemaLoja.java
-
-    ├── versao_refatorada/
-    │   ├── Produto.java
-    │   ├── Relatorio.java
-    │   ├── SistemaLoja.java
-    │   ├── ResumoLoja.java
 
     ├── reestruturacao_ioc_sl/
     │   ├── GeradorResumo.java
